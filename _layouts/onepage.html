@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+  {%- comment %} ?v= changes on every build so browsers fetch updated CSS/JS. {% endcomment %}
+  {%- assign version = site.time | date: '%s' %}
+  <link rel="stylesheet" href="{{ '/assets/css/onepage.css' | relative_url }}?v={{ version }}">
+  <script src="{{ '/assets/js/onepage.js' | relative_url }}?v={{ version }}" defer></script>
+</head>
+<body>
+  {{ content }}
+</body>
+</html>

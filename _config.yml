@@ -1,0 +1,13 @@
+title: DPlexBio
+description: Digital PCR powered by Artificial Intelligence
+url: "https://dplexbio.com"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - "*.docx"
+  - "*.pptx"
+  - scripts
+  - source
