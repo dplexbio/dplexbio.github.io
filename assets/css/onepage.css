@@ -48,6 +48,7 @@ section { padding: 96px 0; }
   color: var(--blue);
   margin-bottom: 12px;
 }
+.term { text-transform: none; }
 .sub { font-size: 18px; color: var(--muted); }
 .lead { font-size: 23px; color: #354b61; }
 .small { font-size: 14px; color: var(--muted); }
