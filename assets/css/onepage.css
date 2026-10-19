@@ -151,6 +151,18 @@ section { padding: 96px 0; }
 .figure { display: block; width: 100%; border-radius: 12px; box-shadow: 0 20px 52px rgba(15, 52, 86, .12); }
 .figure--flat { box-shadow: none; }
 .svg-figure svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 15px 30px rgba(24, 55, 85, .09)); }
+/* Card variant: the panel stretches to the row height; the drawing is centered inside */
+.svg-figure--card {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d0e3f2;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, #f3f9ff, #e5f1fd);
+  box-shadow: 0 15px 30px rgba(24, 55, 85, .09);
+}
+.svg-figure--card svg { filter: none; }
+.svg-figure--card .svg-bg { display: none; }
 [data-zoom] { cursor: zoom-in; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
