@@ -1,34 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DPlexBio, INC home page</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    img {
-      max-width: 90%;
-    }
-    p {
-      text-align: center;
-      padding: 0 1rem;
-    }
-  </style>
-</head>
-<body>
-  <img src="DPLEX_bio_instrument.png" alt="Instrument, PC, and logo for DPlexBio emulsion digital PCR system.">
-  <H1>DPlexBio</H1>
-  <p>Digital PCR powered by Artificial Intelligence</p>
-  <p>Business inquiries please contact info@dplexbio.com</p>
-</body>
-</html>
+---
+layout: onepage
+title: DPlexBio — AI-Scaled Digital PCR
+description: Bringing digital PCR precision to high-throughput molecular testing.
+---
+{%- assign img = '/assets/images/onepage' | relative_url -%}
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#home"><img src="{{ img }}/logo.png" alt="DPlexBio logo" width="323" height="160">DPlexBio</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">&#9776;</button>
+    <div class="nav__links" id="nav-links">
+      <a href="#technology">Technology</a>
+      <a href="#products">Products</a>
+      <a href="#company">Company</a>
+      <a class="nav__pill" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="hero part" id="home">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">Emulsion digital PCR (<span class="term">edPCR</span>)</p>
+        <h1>AI-scaled<br>digital PCR</h1>
+        <p class="lead">Bringing digital PCR precision to high-throughput molecular testing.</p>
+        <p>DPlexBio’s emulsion digital PCR (edPCR) combines simple emulsion generation, 3D fluorescence imaging, and AI-powered analysis to enable absolute nucleic acid quantitation without complex and expensive microfluidic partitioning.</p>
+      </div>
+      <img class="hero__img" src="{{ img }}/hero-instrument.webp" width="1344" height="768" alt="Conceptual visualization of DPlexBio edPCR combining instrumentation, fluorescent droplets, and computational analysis">
+    </div>
+  </header>
+
+  <div id="technology" class="part">
+    <section class="dark">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">The paradigm shift</p>
+          <h2>Shifting the scaling problem from chips to compute.</h2>
+          <p class="sub">Digital PCR provides absolute nucleic acid quantitation with exceptional precision. Conventional systems achieve it through complex and expensive microfluidics. DPlexBio takes a simpler path.</p>
+        </div>
+        <div class="compare">
+          <div>
+            <p class="compare__label">Conventional digital PCR</p>
+            <h3>Precision is built into the consumable.</h3>
+            <p>Microfluidic chips create highly uniform partitions before PCR.</p>
+            <p class="compare__idea">Scaling depends on precision-manufactured physical components.</p>
+          </div>
+          <div>
+            <p class="compare__label compare__label--accent">DPlexBio <span class="term">edPCR</span></p>
+            <h3>Precision is built into the measurement.</h3>
+            <p>Simple shaking creates variable-volume droplets that are measured by 3D imaging and AI analysis.</p>
+            <p class="compare__idea">Scaling shifts toward imaging, software and computation.</p>
+          </div>
+        </div>
+        <p class="manifesto">edPCR replaces microfluidic partitioning with 3D imaging and computation.</p>
+      </div>
+    </section>
+
+    <section class="pale" id="workflow">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Simple workflow</p>
+          <h2>Digital PCR, simplified.</h2>
+          <p class="sub">Generate droplets directly in standard-format wells, thermocycle, image in 3D, and let computational analysis determine absolute target concentration.</p>
+        </div>
+        <img class="figure-wide" src="{{ img }}/workflow.webp" width="1535" height="480" loading="lazy" data-zoom alt="edPCR workflow: load and shake multi-well plate, thermocycle, then image and analyze">
+      </div>
+    </section>
+
+    <section class="dark" id="video-overview">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">See <span class="term">edPCR</span> in action</p>
+          <h2>Digital PCR, simplified</h2>
+          <p class="sub">From a quick shake to absolute nucleic acid quantitation. Explore how DPlexBio combines emulsion generation, 3D fluorescence imaging, and computational analysis in one streamlined workflow.</p>
+        </div>
+        <div class="video">
+          <video controls playsinline preload="metadata" aria-label="edPCR overview video">
+            <source src="{{ '/assets/DPB-Tech-explainer.mp4' | relative_url }}#t=0.1" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="polydisperse">
+      <div class="wrap split">
+        <div class="svg-figure svg-figure--card">{% include onepage/droplet-range.svg %}</div>
+        <div>
+          <p class="kicker">A different approach</p>
+          <h2>Different-sized droplets are not a limitation. Polydispersity is an advantage.</h2>
+          <p class="sub">Conventional digital PCR has been built around the assumption that accurate quantitation requires uniform partitions. We have demonstrated that accurate droplet digital PCR does not require monodisperse droplets—and, in fact, benefits from polydisperse droplets — and thus does not require an expensive instrument or microfluidic chip to generate them.</p>
+          <p class="quote">Simple droplets. Sophisticated measurement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="analysis">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Computational measurement</p>
+          <h2>From fluorescence images to molecular counts.</h2>
+          <p class="sub">DPlexBio’s emulsion digital PCR (edPCR) software identifies individual droplets in 3D, measures their volumes and fluorescence, classifies PCR-positive reactions, and calculates absolute nucleic acid concentration.</p>
+        </div>
+        <img class="figure-wide" src="{{ img }}/analysis-pipeline.webp" width="1800" height="498" loading="lazy" data-zoom alt="edPCR computational workflow: reference fluorescence image, droplet segmentation, PCR intensity image, and droplet positivity plot">
+        <p class="callout"><b>AI-scaled digital PCR</b> Physics-informed and generative AI for faster 3D imaging.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker">Why <span class="term">edPCR</span></p>
+          <h2>Digital PCR performance. qPCR-like workflow.</h2>
+        </div>
+        <div class="cards cards--4">
+          <div class="card card--icon">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32V20M16 32V12M24 32V16M32 32V8"/></svg>
+            <h3>Absolute quantitation</h3>
+            <p>Count molecules directly without a standard curve.</p>
+          </div>
+          <div class="card card--icon">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 28a14 14 0 0 1 28 0M20 28l7-9"/></svg>
+            <h3>Wide dynamic range</h3>
+            <p>Variable-volume droplets enable accurate quantitation across low and high abundance targets.</p>
+          </div>
+          <div class="card card--icon">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6 6 13l14 7 14-7-14-7ZM6 20l14 7 14-7M6 27l14 7 14-7"/></svg>
+            <h3>High throughput</h3>
+            <p>High particle and sample throughput with rapid imaging and 96 or 384 samples per run.</p>
+          </div>
+          <div class="card card--icon">
+            <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M24 15h-6a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-6M20 12v3M20 27v3"/></svg>
+            <h3>Low cost</h3>
+            <p>No precision microfluidic chips or dedicated droplet-generation instrument.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="pale part" id="products">
+    <div class="wrap">
+      <div class="center">
+        <p class="kicker">Commercial platform</p>
+        <h2>Commercial platform.</h2>
+        <p class="sub">One integrated edPCR platform.</p>
+      </div>
+      <div class="cards cards--4">
+        <article class="card card--media">
+          <div class="card__media card__media--contain"><img src="{{ img }}/dplex-express-dx.webp" width="1210" height="844" loading="lazy" alt="DPlex Express"></div>
+          <h3>DPlex Express</h3>
+          <p>High-throughput automated 3D fluorescence imaging across 96 or 384 wells.</p>
+        </article>
+        <article class="card card--media">
+          <div class="card__media card__media--contain"><img src="{{ img }}/dplex-pulse.webp" width="377" height="545" loading="lazy" alt="DPlex Pulse"></div>
+          <h3>DPlex Pulse</h3>
+          <p>Programmable shaker for rapid emulsion generation.</p>
+        </article>
+        <article class="card card--media">
+          <div class="card__media card__media--contain"><img src="{{ img }}/plates-reagents.png" width="771" height="391" loading="lazy" alt="Plates &amp; Reagents"></div>
+          <h3>Plates &amp; Reagents</h3>
+          <p>Purpose-built edPCR consumables that offer high flexibility – single reaction, strip of 8 reactions, full 96 or 384 well plates.</p>
+        </article>
+        <article class="card card--media">
+          <div class="card__media card__media--contain"><img src="{{ img }}/dplex-inspect.png" width="771" height="391" loading="lazy" alt="Plates &amp; Reagents"></div>
+          <h3>DPlex Inspect Software</h3>
+          <p>Turn-key edPCR analysis based on AI-enhanced 3D image processing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div id="company" class="part">
+    <section class="dark">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Company</p>
+          <h2>Making digital PCR practical at scale.</h2>
+          <p class="sub">DPlexBio is a Life Sciences company commercializing emulsion digital PCR technology developed from research at the University of Washington. Our goal is to make digital PCR precision practical and affordable for routine research and high-throughput molecular testing.</p>
+          <p class="buttons buttons--left"><a class="btn" href="#contact">Contact DPlexBio</a></p>
+        </div>
+        <ol class="timeline">
+          <li><b>Scientific foundation</b>Droplet microfluidics and digital PCR research</li>
+          <li><b>Platform development</b>Automated edPCR instrumentation, software and consumables</li>
+          <li><b>External validation</b>Beta tested in a CLIA laboratory</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap center">
+        <h2>Scale molecular measurements with computation.</h2>
+        <p class="sub">DPlexBio is developing AI-scaled digital PCR for research, clinical laboratories, and high-throughput molecular diagnostic applications.</p>
+        <p class="buttons">
+          <a class="btn" href="#technology">Explore the technology</a>
+          <a class="btn btn--light" href="mailto:info@dplexbio.com">Partner with DPlexBio</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap footer__grid">
+    <div>
+      <p class="brand brand--footer"><img src="{{ img }}/logo.png" alt="DPlexBio logo" width="323" height="160" loading="lazy">DPlexBio</p>
+      <address>3301 Monte Villa Parkway, Suite 325<br>Bothell, WA 98021<br><a href="mailto:info@dplexbio.com">info@dplexbio.com</a></address>
+    </div>
+    <div>
+      <p><b>Explore</b></p>
+      <a href="#technology">Technology</a>
+      <a href="#products">Products</a>
+    </div>
+    <div>
+      <p><b>Company</b></p>
+      <a href="#company">About</a>
+      <a href="mailto:info@dplexbio.com?subject=Partner%20with%20DPlexBio">Partner with us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" aria-label="Enlarged image">
+  <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+  <img alt="">
+</dialog>
