@@ -7,3 +7,4 @@ vendor/
 source/
 *.docx
 *.pptx
+.claude/
