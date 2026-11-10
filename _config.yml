@@ -1,6 +1,7 @@
 title: DPlexBio
 description: Digital PCR powered by Artificial Intelligence
 url: "https://dplexbio.com"
+google_tag_manager: GTM-PS5KW9DJ
 
 exclude:
   - README.md
